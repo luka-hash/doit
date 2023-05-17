@@ -1,5 +1,5 @@
 // Copyright (c) 2023 Luka Ivanovic
-// This code is licensed under MIT license (see LICENSE for details)
+// This code is licensed under MIT licence (see LICENCE for details)
 
 package main
 

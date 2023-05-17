@@ -102,6 +102,6 @@ so as for now, `doit` wont work on muslc systems).
 - add tests for files
 - add options to retry failed downloads 
 
-## LICENSE
+## LICENCE
 
-This code is licensed under MIT license (see LICENSE for details)
+This code is licensed under MIT licence (see LICENCE for details)
