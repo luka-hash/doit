@@ -1,14 +1,14 @@
 # doit
 
-Opinionated wrapper around yt-dlp.
+Opinionated wrapper around `yt-dlp`.
 
 Why and when?
 
-This is not a music downloader for everyone. It works for specific usecases only
+This is not a music downloader for everyone. It works for specific use cases only
 (hence, _opinionated_). Let me explain.
 
 I have a decently sized local library of music, and the library grows
-**incrementaly**. I organize the music in 2 ways:
+**incrementally**. I organize the music in 2 ways:
 
 - author/album/songs
   - this means that the structure looks something like this:
@@ -57,9 +57,9 @@ Author 2 - Song A https://hi.com
 
 You might think that it's just too much work writing every author and title by
 hand, but that is **required** since there is no other way to guaranty the
-authors and titles are correct and/or properly formated. Plus, since english
-input method is only common input method on all my deviced I listen to my music,
-all names/titles need to be germanized (if that is a correct term).
+authors and titles are correct and/or properly formatted. Plus, since English
+input method is the only common input method on all my devices I listen to my music,
+all names/titles need to be transliterated.
 
 If your workflow is similar, `doit` is the program for you. Enjoy :)
 
@@ -70,7 +70,7 @@ Yes.
 ## Options
 
 Available flags/options (with examples). All flags can be used with both single 
-and double dash ( - and -- )
+and double dash ( - and -- ).
 
 ```
 index <number>             - Enables indexing and sets the starting index, or 
@@ -91,9 +91,9 @@ the current directory.
 
 ## Dependencies
 
-Given the nature of the script (wrapper), doit depends on
-[yt-dlp](https://github.com/yt-dlp/yt-dlp) (which, I believe, depends on glibc,
-so as for now, `doit` wont work on muslc systems).
+Given the nature of the script (wrapper), `doit` depends on
+[yt-dlp](https://github.com/yt-dlp/yt-dlp) (which, I believe, depends on `glibc`,
+so as for now, `doit` won't work on `muslc` systems).
 
 ## TODO
 
