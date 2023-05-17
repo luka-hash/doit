@@ -1,3 +1,6 @@
+// Copyright (c) 2023 Luka Ivanovic
+// This code is licensed under MIT license (see LICENSE for details)
+
 package main
 
 import (
