@@ -104,4 +104,4 @@ so as for now, `doit` won't work on `muslc` systems).
 
 ## Licence
 
-This code is licensed under MIT licence (see LICENCE for details)
+This code is licensed under MIT licence (see LICENCE for details).
