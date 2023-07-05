@@ -102,6 +102,10 @@ so as for now, `doit` won't work on `muslc` systems).
 - add tests for files
 - add options to retry failed downloads 
 
+Known bugs:
+- it does not process additional arguments
+- 
+
 ## Licence
 
 This code is licensed under MIT licence (see LICENCE for details).

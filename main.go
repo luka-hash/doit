@@ -93,7 +93,14 @@ func main() {
 	links = filter(links, func(s string) bool {
 		return !strings.HasPrefix(s, "--")
 	})
+	links = filter(links, func(s string) bool {
+		return len(s) != 0
+	})
 	total := len(links)
+	if total == 0 {
+		fmt.Fprintln(os.Stderr, "There is no songs to download :(")
+		os.Exit(1)
+	}
 	succeeded := 0
 	commands := make(chan *exec.Cmd, total)
 	results := make(chan error, total)
