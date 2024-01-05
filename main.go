@@ -59,11 +59,14 @@ func toString(num int) string {
 
 func doer(commands <-chan *exec.Cmd, results chan<- error) {
 	for job := range commands {
+		// fmt.Println(job)
 		err := job.Run()
-		if err != nil {
-			results <- err
-		} else {
+		if err == nil {
+			// fmt.Println("good", strings.Split(job.String(), " -o "))
 			results <- nil
+		} else {
+			// fmt.Println("bad", strings.Split(job.String(), " -o "))
+			results <- err
 		}
 	}
 }
@@ -108,17 +111,19 @@ func main() {
 		go doer(commands, results)
 	}
 	padLength := max(2, len(toString(len(links))))
-	for i := range links {
-		title, url := parseLink(links[i])
-		if *index > 0 {
-			title = padStart(toString(*index), padLength, "0") + " - " + title + ".mp3"
-			title = filepath.Join(*outputDir, title)
-			*index += 1
+	go func() {
+		for i := range links {
+			title, url := parseLink(links[i])
+			if *index > 0 {
+				title = padStart(toString(*index), padLength, "0") + " - " + title + ".mp3"
+				title = filepath.Join(*outputDir, title)
+				*index += 1
+			}
+			commands <- exec.Command("yt-dlp", "-f", "bestaudio/best", "--extract-audio",
+				"--audio-quality", "0", "--audio-format", "mp3", "-o", title, url)
 		}
-		commands <- exec.Command("yt-dlp", "-f", "bestaudio/best", "--extract-audio",
-			"--audio-quality", "0", "--audio-format", "mp3", "-o", title, url)
-	}
-	close(commands)
+	}()
+	// close(commands)
 	for range links {
 		err := <-results
 		if err == nil {
