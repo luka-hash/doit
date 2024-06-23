@@ -2,7 +2,7 @@
 
 Opinionated wrapper around `yt-dlp`.
 
-Why and when?
+## Why and what?
 
 This is not a music downloader for everyone. It works for specific use cases only
 (hence, _opinionated_). Let me explain.
