@@ -63,6 +63,8 @@ all names/titles need to be transliterated.
 
 If your workflow is similar, `doit` is the program for you. Enjoy :)
 
+Note: you can now use [generate-doit-links](https://github.com/luka-hash/generate-doit-links) to speed up the process of generating links of new albums/playlists (for non-incremental builds of links).
+
 ## Is it any good?
 
 Yes.
