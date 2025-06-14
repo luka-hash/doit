@@ -124,12 +124,12 @@ func main() {
 				fmt.Fprintln(os.Stderr, err.Error())
 			}
 			if *index > 0 {
-				title = padLeft(toString(*index), padLength, "0") + " - " + title + ".mp3"
+				title = padLeft(toString(*index), padLength, "0") + " - " + title + ".opus"
 				title = filepath.Join(*outputDir, title)
 				*index += 1
 			}
 			arguments := []string{"-f", "bestaudio/best", "--extract-audio",
-				"--audio-quality", "0", "--audio-format", "mp3"}
+				"--audio-quality", "0", "--audio-format", "opus"}
 			if (*additional_command) != "" {
 				arguments = append(arguments, strings.Fields(*additional_command)...)
 			}
